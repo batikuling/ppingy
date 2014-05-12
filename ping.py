@@ -56,7 +56,7 @@ def ping(sock, dest_addr, id = os.getpid() & 0xffff, seq_num = 0,
     #RECIEVING PART
     t = time.clock()
     
-    ready_r, *trash = select.select([sock], [], [], timeout)
+    ready_r, _, __ = select.select([sock], [], [], timeout)
     travel_time = time.clock() - t
 
     #if timedout
