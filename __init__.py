@@ -1,1 +1,1 @@
-from ping import ping
+from ping import ping, is_alive
